@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
+
+.lavender-theme {
+  --color-point: #a56bc0;
+  --color-sub: #e2afff;
+}
+
+.olive-theme {
+  --color-point: #77991b;
+  --color-sub: #c3d38b;
+}
+
+.amaranth-theme {
+  --color-point: #a1437a;
+  --color-sub: #e993b0;
+}
 @tailwind utilities;
