@@ -22,23 +22,27 @@ function Card({ postId, cardN }) {
 
   return (
     <>
-      <div className="border-4 border-black">
-        <div className="flex justify-between items-center  h-[15em]">
+      <div className="border border-red-300">
+        <div className="flex justify-between items-center">
           <button
-            className={(currentId === 1 ? 'text-gray-300' : '') + ' text-5xl'}
+            className={
+              (currentId === 1 ? 'text-gray-300 dark:text-gray-600' : '') +
+              ' text-5xl'
+            }
             onClick={() => previousCard()}
             disabled={currentId === 1}
           >
             {'<'}
           </button>
-          <div className="flex flex-col justify-between border w-[15em] h-[15em]">
+          <div className="flex flex-col justify-between border w-[20em] h-[20em]">
             <p className="text-5xl">"</p>
             <div className="border text-center">{currentCard?.content}</div>
             <p className="border text-right">{currentCard?.page}p</p>
           </div>
           <button
             className={
-              (currentId === cardN ? 'text-gray-300' : '') + ' text-5xl'
+              (currentId === cardN ? 'text-gray-300 dark:text-gray-600' : '') +
+              ' text-5xl'
             }
             onClick={() => nextCard()}
             disabled={currentId === cardN}
