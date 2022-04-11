@@ -1,25 +1,29 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 //local
-import Post from './Contents/Post'
-import { posts } from './TestData'
+import Content from './Contents/Content'
+import Friend from './Side/Friend'
+import Club from './Side/Club'
+import Option from './Side/Option'
 
 function Main() {
   return (
-    <>
-      <div className="flex justify-center border-4 border-black min-h-screen dark:bg-black dark:text-white">
-        <div className="border-4 w-[50em]">
-          <p className="text-3xl">OO님의 책장</p>
-          <div className="flex justify-center ">
-            <div className="w-full sm:w-[80%]">
-              {posts?.map(post => (
-                <Post post={post} />
-              ))}
-            </div>
-          </div>
+    <div className="dark:bg-black dark:text-white">
+      <div className="border border-black max-w-3xl mx-auto sm:px-6 md:max-w-7xl md:px-8 md:grid md:grid-cols-12 md:gap-8">
+        <div className="border border-black hidden md:block md:col-span-4 lg:col-span-3">
+          <nav name="좌측 사이드바" className="sticky top-4">
+            <Friend />
+            <Club />
+          </nav>
         </div>
+        <Content />
+        <aside className="hidden xl:block xl:col-span-3">
+          <section name="우측 사이드바" className="sticky top-4 space-y-4">
+            <Option />
+          </section>
+        </aside>
       </div>
-    </>
+    </div>
   )
 }
 

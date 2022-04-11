@@ -9,6 +9,7 @@ import store from './redux/store'
 //local
 import './tailwind.css'
 import App from './App'
+import Example from './page/Main/Test'
 
 ReactDOM.render(
   <Provider store={store}>
