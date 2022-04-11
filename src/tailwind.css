@@ -2,17 +2,31 @@
 @tailwind components;
 
 .lavender-theme {
-  --color-point: #a56bc0;
+  --color-main: #a56bc0;
+  --color-point: #8e4dac;
   --color-sub: #e2afff;
 }
 
 .olive-theme {
-  --color-point: #77991b;
-  --color-sub: #c3d38b;
+  --color-main: #838517;
+  --color-point: #6f700f;
+  --color-sub: #d2d38b;
 }
 
 .amaranth-theme {
-  --color-point: #a1437a;
+  --color-main: #a1437a;
+  --color-point: #9c3471;
   --color-sub: #e993b0;
 }
+.hydrangea-theme {
+  --color-main: #567eb9;
+  --color-point: #3d66a3;
+  --color-sub: #93c7e9;
+}
+.freesia-theme {
+  --color-main: #ecab31;
+  --color-point: #e6a01e;
+  --color-sub: #ffd373;
+}
+
 @tailwind utilities;

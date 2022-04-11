@@ -3,6 +3,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        main: 'var(--color-main)',
         point: 'var(--color-point)',
         sub: 'var(--color-sub)',
       },
