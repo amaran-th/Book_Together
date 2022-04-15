@@ -10,7 +10,7 @@ function Header({ open }) {
     <div
       className={
         (open ? 'fixed w-full z-40' : '') +
-        ' border-4 border-black bg-sub text-main'
+        ' border-4 border-black text-main bg-sub'
       }
     >
       <div className="flex justify-between">
