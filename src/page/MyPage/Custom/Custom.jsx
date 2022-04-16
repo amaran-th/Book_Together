@@ -20,12 +20,10 @@ function Custom({ darkMode, theme, updateCurrent, darkModeToggle }) {
   console.log(theme)
   return (
     <div className="min-h-[80vh] space-y-6 sm:px-6 lg:px-0 lg:col-span-9">
-      <div className="shadow sm:rounded-md sm:overflow-hidden">
-        <div className="bg-white py-6 px-4 space-y-6 sm:p-6">
+      <div className="shadow sm:rounded-md sm:overflow-hidden dark:border dark:border-gray-700">
+        <div className="py-6 px-4 space-y-6 sm:p-6">
           <div>
-            <h3 className="text-lg leading-6 font-medium text-gray-900">
-              커스텀
-            </h3>
+            <h3 className="text-lg leading-6 font-medium">커스텀</h3>
             <p className="mt-1 text-sm text-gray-500">화면을 꾸며보세요.</p>
           </div>
           <div className="mt-6 grid grid-cols-3 space-y-6">
@@ -37,15 +35,15 @@ function Custom({ darkMode, theme, updateCurrent, darkModeToggle }) {
                 <span className="border inline-block bg-sub h-5 w-5 rounded-full "></span>
               </div>
 
-              <div className="mt-1 flex border-2 border-sub rounded-lg bg-gray-50">
+              <div className="mt-1 flex border border-sub rounded-lg bg-gray-50 dark:bg-gray-900">
                 {themes.map(item => (
                   <span key={item} className={item + '-theme'}>
                     <button
                       className={
                         (theme.theme === item
                           ? 'text-black bg-main dark:text-white'
-                          : 'text-sub bg-white dark:bg-black hover:text-point') +
-                        ' p-1 px-2 m-1 rounded-full border border-point'
+                          : 'text-sub bg-white dark:bg-black hover:text-point hover:shadow-md') +
+                        ' p-1 px-2 m-1 rounded-full border-2 border-main'
                       }
                       onClick={() => {
                         updateCurrent(item)
@@ -58,12 +56,15 @@ function Custom({ darkMode, theme, updateCurrent, darkModeToggle }) {
               </div>
             </div>
             <div className="col-span-2">
-              <label className="block text-sm font-medium">다크 모드</label>
+              <label className="block text-sm font-medium">
+                다크 모드 : <span className="hidden dark:inline-block">ON</span>
+                <span className="dark:hidden inline-block">OFF</span>
+              </label>
 
               <Switch
                 checked={darkMode}
                 onChange={() => darkModeToggle()}
-                className="bg-gray-200 dark:bg-black relative inline-flex items-center mt-1 h-6 rounded-full w-11"
+                className="bg-gray-200 dark:bg-gray-700 relative inline-flex items-center mt-1 h-6 rounded-full w-11"
               >
                 <span className="sr-only">Dark Mode</span>
                 <span

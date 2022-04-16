@@ -10,10 +10,7 @@ function Header({ open }) {
   //open은 모바일의 메뉴 창이 열려있는지 여부
   return (
     <div
-      className={
-        (open ? 'fixed w-full z-40' : '') +
-        ' border-4 border-black text-main bg-sub p-2'
-      }
+      className={(open ? 'fixed w-full z-40' : '') + ' text-main bg-sub p-2'}
     >
       <div className="flex justify-between">
         <button

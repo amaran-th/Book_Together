@@ -30,7 +30,7 @@ const cards = [
       id: 1,
       content: '인용구',
       page: 234,
-      bgImage: '이미지 링크',
+      bgImageId: 1,
       detail: '아무말',
       font: '돋움',
     },
@@ -38,7 +38,7 @@ const cards = [
       id: 2,
       content: '인용구2',
       page: 234,
-      bgImage: '이미지 링크',
+      bgImageId: 2,
       detail: '아무말2',
       font: '돋움',
     },
@@ -46,7 +46,7 @@ const cards = [
       id: 3,
       content: '인용구3',
       page: 234,
-      bgImage: '이미지 링크',
+      bgImageId: 3,
       detail: '아무말3',
       font: '돋움',
     },
@@ -57,7 +57,7 @@ const cards = [
       content:
         '두번째 인용구dddddddddddddd ddddddddddddddd ddddddddd dd ddddddd ddddddddd ddddddddddd dddddddddddddddd',
       page: 101,
-      bgImage: '이미지 링크',
+      bgImageId: 4,
       detail: '아무말',
       font: '돋움',
     },
@@ -65,11 +65,18 @@ const cards = [
       id: 2,
       content: '두번째 인용구2',
       page: 102,
-      bgImage: '이미지 링크',
+      bgImageId: 5,
       detail: '아무말2',
       font: '돋움',
     },
   ],
+]
+const bgImages = [
+  { id: 1, imageURL: '' },
+  { id: 2, imageURL: '' },
+  { id: 3, imageURL: '' },
+  { id: 4, imageURL: '' },
+  { id: 5, imageURL: '' },
 ]
 
 export { posts, cards }

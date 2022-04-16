@@ -32,8 +32,8 @@ function MyPage() {
   const [current, setCurrent] = useState('프로필')
   return (
     <>
-      <div className="shadow-md m-2 py-4">
-        <button className="inline-flex items-center m-1 px-2 py-1 border border-gray-500 text-sm rounded-md text-black bg-white hover:text-main hover:border-main">
+      <div className="flex items-center shadow-md m-2 py-4 dark:border-b dark:border-gray-700">
+        <button className="inline-flex items-center m-1 px-2 py-2 border border-gray-500 text-sm rounded-md hover:text-main hover:border-main hover:shadow-md">
           {'<'}이전 페이지로
         </button>
         <span className="text-2xl">마이페이지</span>
@@ -50,8 +50,8 @@ function MyPage() {
                 onClick={() => setCurrent(item.name)}
                 className={
                   (item.name === current
-                    ? 'bg-gray-50 text-main hover:text-point hover:bg-white'
-                    : 'hover:bg-gray-50') +
+                    ? 'bg-gray-50 text-main hover:text-point dark:bg-gray-900'
+                    : 'hover:bg-gray-50 dark:hover:bg-gray-900') +
                   ' group rounded-md px-3 py-2 flex w-full items-center text-sm font-medium'
                 }
                 aria-current={item.name === current ? 'page' : undefined}

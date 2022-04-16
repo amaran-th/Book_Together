@@ -40,7 +40,7 @@ const getTheme = theme => {
 }
 function Footer({ darkMode, theme, updateCurrent, darkModeToggle }) {
   return (
-    <div className="border-4 border-black bg-sub text-main">
+    <div className="bg-sub text-main">
       <div
         name="컬러테마 선택"
         className="m-2 border-2 flex justify-end items-center"
@@ -50,7 +50,7 @@ function Footer({ darkMode, theme, updateCurrent, darkModeToggle }) {
             <button
               className={
                 (theme.theme === item
-                  ? 'text-black bg-main dark:text-white'
+                  ? 'text-black bg-main'
                   : 'text-sub bg-white dark:bg-black hover:text-point') +
                 ' p-1 m-1 rounded-lg'
               }

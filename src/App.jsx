@@ -15,16 +15,18 @@ function App({ darkMode, theme }) {
   return (
     <>
       <div className={theme.theme + '-theme ' + (darkMode ? 'dark' : 'light')}>
-        <Header />
-        <Suspense fallback={<div>Loading...</div>}>
-          <Routes>
-            <Route path="/" element={<Init />} />
-            <Route path="/main" element={<Main />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/mypage" element={<MyPage />} />
-          </Routes>
-        </Suspense>
-        <Footer />
+        <div className="dark:text-white dark:bg-black">
+          <Header />
+          <Suspense fallback={<div>Loading...</div>}>
+            <Routes>
+              <Route path="/" element={<Init />} />
+              <Route path="/main" element={<Main />} />
+              <Route path="/signup" element={<SignUp />} />
+              <Route path="/mypage" element={<MyPage />} />
+            </Routes>
+          </Suspense>
+          <Footer />
+        </div>
       </div>
     </>
   )

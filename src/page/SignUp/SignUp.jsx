@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom'
 function SignUp() {
   const navigate = useNavigate()
   return (
-    <div className="flex justify-center dark:bg-black dark:text-white">
+    <div className="flex justify-center">
       <form className="border shadow-lg rounded-lg p-3 m-3">
         <div className="space-y-8 divide-y divide-gray-200">
           <div className="pt-4">
