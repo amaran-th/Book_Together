@@ -27,7 +27,7 @@ function Custom({ darkMode, theme, updateCurrent, darkModeToggle }) {
             <p className="mt-1 text-sm text-gray-500">화면을 꾸며보세요.</p>
           </div>
           <div className="mt-6 grid grid-cols-3 space-y-6">
-            <div className="col-span-2">
+            <div className="col-span-3 sm:col-span-2">
               <label className="block text-sm font-medium">컬러 테마</label>
               <div className="space-x-1">
                 <span className="border inline-block bg-point h-5 w-5 rounded-full "></span>
@@ -35,7 +35,7 @@ function Custom({ darkMode, theme, updateCurrent, darkModeToggle }) {
                 <span className="border inline-block bg-sub h-5 w-5 rounded-full "></span>
               </div>
 
-              <div className="mt-1 flex border border-sub rounded-lg bg-gray-50 dark:bg-gray-900">
+              <div className="mt-1 md:flex md:justify-center border border-sub rounded-lg bg-gray-50 dark:bg-gray-900">
                 {themes.map(item => (
                   <span key={item} className={item + '-theme'}>
                     <button

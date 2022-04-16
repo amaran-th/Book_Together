@@ -6,7 +6,7 @@ function Post({ post }) {
   //console.log(post)
   return (
     <div className="border-y border-sub rounded-lg p-3 my-5">
-      <span className="text-2xl">{post.title}</span>
+      <span className="font-title text-2xl">{post.title}</span>
       <span className="text-base italic">by{post.author}</span>
       <p className="my-1">
         {post.keywords?.map(keyword => (

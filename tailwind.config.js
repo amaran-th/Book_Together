@@ -2,6 +2,10 @@ const colors = require('tailwindcss/colors')
 module.exports = {
   purge: ['./src/**/*.{html,js,jsx,ts,tsx}'],
   theme: {
+    fontFamily: {
+      title: ['Cafe24Ohsquareair'],
+      content: ['MaruBuri-Regular'],
+    },
     extend: {
       colors: {
         main: 'var(--color-main)',

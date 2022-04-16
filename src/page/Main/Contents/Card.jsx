@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 import { cards } from '../TestData'
-
+const getBgImg = id => {
+  try {
+    return <img src={require('../../../assets/img/bgImg/' + id + '.png')} />
+  } catch (e) {
+    return <img src={require('../../../assets/img/bgImg/default.png')} />
+  }
+}
 function Card({ postId, cardN }) {
   const Cards = cards[postId - 1]
   const [currentId, setCurrentId] = useState(1)
@@ -34,10 +40,19 @@ function Card({ postId, cardN }) {
           >
             {'<'}
           </button>
-          <div className="flex flex-col justify-between border w-[20em] h-[20em]">
-            <p className="text-5xl">"</p>
-            <div className="border text-center">{currentCard?.content}</div>
-            <p className="border text-right">{currentCard?.page}p</p>
+          <div
+            className={
+              'relative flex flex-col justify-between border w-[20em] h-[20em]'
+            }
+          >
+            {getBgImg(currentCard?.bgImageId)}
+            <div className="absolute top-0  flex flex-col justify-between w-full h-full">
+              <p className="text-5xl">"</p>
+              <div className="border text-center font-content">
+                {currentCard?.content}
+              </div>
+              <p className="border text-right">{currentCard?.page}p</p>
+            </div>
           </div>
           <button
             className={
@@ -51,7 +66,12 @@ function Card({ postId, cardN }) {
           </button>
         </div>
         <div className="flex justify-center">
-          <span className="inline-block border border-gray-300 min-w-[4em] py-1 px-2 m-[1px] text-sm text-center rounded-full">
+          <span
+            className={
+              (currentId === cardN ? 'text-main font-bold' : '') +
+              ' inline-block border border-gray-300 min-w-[4em] py-1 px-2 m-[1px] text-sm text-center rounded-full'
+            }
+          >
             {currentId + '/' + cardN}
           </span>
         </div>
