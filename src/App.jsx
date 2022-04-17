@@ -8,6 +8,7 @@ import Footer from './shared/Footer'
 const Init = lazy(() => import('./page/Init/Init'))
 const SignUp = lazy(() => import('./page/SignUp/SignUp'))
 const Main = lazy(() => import('./page/Main/Main'))
+const Write = lazy(() => import('./page/Write/Write'))
 const MyPage = lazy(() => import('./page/MyPage/MyPage'))
 //const theme = 'lavender'
 function App({ darkMode, theme }) {
@@ -21,6 +22,7 @@ function App({ darkMode, theme }) {
             <Routes>
               <Route path="/" element={<Init />} />
               <Route path="/main" element={<Main />} />
+              <Route path="/write" element={<Write />} />
               <Route path="/signup" element={<SignUp />} />
               <Route path="/mypage" element={<MyPage />} />
             </Routes>

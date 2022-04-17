@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom'
 import Profile from './Profile/Profile'
 import Account from './Account/Account'
 import Custom from './Custom/Custom'
+import Friend from './Friend/Friend'
+import BookClub from './BookClub/BookClub'
 import {
   CreditCardIcon,
   KeyIcon,
@@ -13,26 +15,26 @@ import {
 } from '@heroicons/react/outline'
 
 const navigation = [
-  { name: '프로필', href: '#', icon: UserCircleIcon, current: true },
-  { name: '계정', href: '#', icon: KeyIcon, current: false },
-  { name: '커스텀', href: '#', icon: CreditCardIcon, current: false },
-  { name: '친구', href: '#', icon: UserGroupIcon, current: false },
-  { name: '북클럽', href: '#', icon: ViewGridAddIcon, current: false },
+  { name: '프로필', href: '#', icon: UserCircleIcon },
+  { name: '계정', href: '#', icon: KeyIcon },
+  { name: '커스텀', href: '#', icon: CreditCardIcon },
+  { name: '친구', href: '#', icon: UserGroupIcon },
+  { name: '북클럽', href: '#', icon: ViewGridAddIcon },
 ]
 const getComponent = current => {
   console.log(current)
   if (current === '프로필') return <Profile />
   else if (current === '계정') return <Account />
   else if (current === '커스텀') return <Custom />
-  else if (current === '친구') return <Profile />
-  else if (current === '북클럽') return <Profile />
+  else if (current === '친구') return <Friend />
+  else if (current === '북클럽') return <BookClub />
 }
 
 function MyPage() {
   const [current, setCurrent] = useState('프로필')
   return (
     <>
-      <div className="flex items-center shadow-md m-2 py-4 dark:border-b dark:border-gray-700">
+      <div className="flex items-center shadow-md mb-2 p-2 dark:border-b dark:border-gray-700">
         <button className="inline-flex items-center m-1 px-2 py-2 border border-gray-500 text-sm rounded-md hover:text-main hover:border-main hover:shadow-md">
           {'<'}이전 페이지로
         </button>

@@ -11,7 +11,7 @@ function Account() {
             <div>
               <h3 className="text-lg leading-6 font-medium">계정 정보</h3>
               <p className="mt-1 text-sm text-gray-500">
-                Use a permanent address where you can recieve mail.
+                계정 정보를 수정할 수 있습니다.
               </p>
             </div>
 
@@ -79,10 +79,13 @@ function Account() {
               </div>
             </div>
           </div>
-          <div className="px-4 py-3 bg-gray-50 text-right sm:px-6 dark:bg-gray-900">
+          <div className="flex justify-between px-4 py-3 bg-gray-50 sm:px-6 dark:bg-gray-900">
+            <button className="border border-gray-500 rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-red-500 hover:bg-gray-50 hover:shadow-md focus:outline-none dark:hover:bg-gray-700">
+              회원 탈퇴하기
+            </button>
             <button
               type="submit"
-              className="bg-main border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-white hover:bg-point hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-main"
+              className="bg-main border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-white hover:bg-point hover:shadow-md focus:outline-none"
             >
               변경 적용하기
             </button>
