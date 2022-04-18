@@ -22,19 +22,19 @@
 .lavender-theme {
   --color-main: #a56bc0;
   --color-point: #8e4dac;
-  --color-sub: #e2afff;
+  --color-sub: #e0bbff;
 }
 
 .olive-theme {
   --color-main: #838517;
   --color-point: #6f700f;
-  --color-sub: #d2d38b;
+  --color-sub: #d2d897;
 }
 
 .amaranth-theme {
-  --color-main: #a1437a;
-  --color-point: #9c3471;
-  --color-sub: #e993b0;
+  --color-main: #b8578f;
+  --color-point: #992f6d;
+  --color-sub: #e7a6bc;
 }
 .hydrangea-theme {
   --color-main: #567eb9;
@@ -44,7 +44,7 @@
 .freesia-theme {
   --color-main: #ecab31;
   --color-point: #e6a01e;
-  --color-sub: #ffd373;
+  --color-sub: #ffdd94;
 }
 
 @tailwind utilities;

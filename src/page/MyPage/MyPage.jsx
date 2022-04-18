@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
+import { useLocation } from 'react-router-dom'
 //local
 import Profile from './Profile/Profile'
 import Account from './Account/Account'
@@ -22,7 +23,7 @@ const navigation = [
   { name: '북클럽', href: '#', icon: ViewGridAddIcon },
 ]
 const getComponent = current => {
-  console.log(current)
+  //console.log(current)
   if (current === '프로필') return <Profile />
   else if (current === '계정') return <Account />
   else if (current === '커스텀') return <Custom />
@@ -31,7 +32,13 @@ const getComponent = current => {
 }
 
 function MyPage() {
-  const [current, setCurrent] = useState('프로필')
+  const [current, setCurrent] = useState()
+  const location = useLocation()
+  useEffect(() => {
+    //console.log('reload mypage')
+    if (location.state) setCurrent(location.state.init)
+    else setCurrent('프로필')
+  }, [])
   return (
     <>
       <div className="flex items-center shadow-md mb-2 p-2 dark:border-b dark:border-gray-700">

@@ -17,7 +17,7 @@ const getTheme = theme => {
 }
 
 function Custom({ darkMode, theme, updateCurrent, darkModeToggle }) {
-  console.log(theme)
+  //console.log(theme)
   return (
     <div className="min-h-[80vh] space-y-6 sm:px-6 lg:px-0 lg:col-span-9">
       <div className="shadow sm:rounded-md sm:overflow-hidden dark:border dark:border-gray-700">
