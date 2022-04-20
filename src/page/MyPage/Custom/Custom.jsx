@@ -35,7 +35,7 @@ function Custom({ darkMode, theme, updateCurrent, darkModeToggle }) {
                 <span className="border inline-block bg-sub h-5 w-5 rounded-full "></span>
               </div>
 
-              <div className="mt-1 md:flex md:justify-center border border-sub rounded-lg bg-gray-50 dark:bg-gray-900">
+              <div className="mt-1 py-1 md:flex md:justify-center border rounded-lg bg-gray-50 dark:bg-gray-900">
                 {themes.map(item => (
                   <span key={item} className={item + '-theme'}>
                     <button

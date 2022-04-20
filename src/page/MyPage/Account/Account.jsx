@@ -44,7 +44,10 @@ function Account() {
                     required
                     className="appearance-none w-full sm:mb-0 mb-3 px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-main focus:border-main sm:text-sm dark:bg-black"
                   />
-                  <button className="sm:ml-3 sm:w-[12em] w-full py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-sub hover:bg-main hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-main">
+                  <button
+                    type="button"
+                    className="sm:ml-3 sm:w-[12em] w-full py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-sub hover:bg-main hover:shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-main"
+                  >
                     인증번호 전송
                   </button>
                 </div>

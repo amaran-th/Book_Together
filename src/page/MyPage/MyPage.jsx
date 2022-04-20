@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 import { useLocation } from 'react-router-dom'
 //local
+import SubHeader from '../../shared/SubHeader'
 import Profile from './Profile/Profile'
 import Account from './Account/Account'
 import Custom from './Custom/Custom'
@@ -41,12 +42,7 @@ function MyPage() {
   }, [])
   return (
     <>
-      <div className="flex items-center shadow-md mb-2 p-2 dark:border-b dark:border-gray-700">
-        <button className="inline-flex items-center m-1 px-2 py-2 border border-gray-500 text-sm rounded-md hover:text-main hover:border-main hover:shadow-md">
-          {'<'}이전 페이지로
-        </button>
-        <span className="text-2xl">마이페이지</span>
-      </div>
+      <SubHeader head={'마이 페이지'} />
       <div className="max-w-3xl mx-auto md:max-w-7xl sm:px-6 md:px-8 lg:grid lg:grid-cols-12 lg:gap-x-5">
         <aside
           name="좌측 사이드바"
