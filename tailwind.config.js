@@ -3,6 +3,7 @@ module.exports = {
   purge: ['./src/**/*.{html,js,jsx,ts,tsx}'],
   theme: {
     fontFamily: {
+      basic: ['GowunDodum-Regular'],
       title: ['Cafe24Ohsquareair'],
       content: ['MaruBuri-Regular'],
     },

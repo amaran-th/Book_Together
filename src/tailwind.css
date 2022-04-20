@@ -18,6 +18,14 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  /*고운돋움Regular*/
+  font-family: 'GowunDodum-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 .lavender-theme {
   --color-main: #a56bc0;
@@ -45,6 +53,23 @@
   --color-main: #ecab31;
   --color-point: #e6a01e;
   --color-sub: #ffdd94;
+}
+
+.light input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px rgb(249, 250, 251) inset;
+  -webkit-text-fill-color: rgb(0, 0, 0);
+}
+.light input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px rgb(249, 250, 251) inset;
+  -webkit-text-fill-color: #000;
+}
+.dark input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px rgb(18, 24, 40) inset;
+  -webkit-text-fill-color: rgb(255, 255, 255);
+}
+.dark input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px rgb(18, 24, 40) inset;
+  -webkit-text-fill-color: rgb(255, 255, 255);
 }
 
 @tailwind utilities;

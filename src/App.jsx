@@ -16,7 +16,7 @@ function App({ darkMode, theme }) {
   return (
     <>
       <div className={theme.theme + '-theme ' + (darkMode ? 'dark' : 'light')}>
-        <div className="dark:text-white dark:bg-black">
+        <div className="dark:text-white dark:bg-black font-basic">
           <Header />
           <Suspense fallback={<div>Loading...</div>}>
             <Routes>
