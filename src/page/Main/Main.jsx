@@ -9,7 +9,7 @@ import NewButton from './Side/NewButton'
 
 function Main() {
   return (
-    <div className="max-w-3xl mx-auto sm:px-6 md:max-w-7xl md:px-8 md:grid md:grid-cols-12 md:gap-8">
+    <div className="max-w-3xl mx-auto sm:px-6 md:max-w-7xl  md:grid md:grid-cols-12 md:gap-8">
       <div className="hidden md:block md:col-span-4 lg:col-span-3">
         <nav name="좌측 사이드바" className="sticky top-4 space-y-4 mt-4">
           <Friend />
@@ -18,7 +18,7 @@ function Main() {
       </div>
       <div
         name="메인 컨텐츠"
-        className="border-4 md:col-span-8 lg:col-span-8 xl:col-span-6"
+        className="mx-6 sm:mx-0 md:col-span-8 lg:col-span-8 xl:col-span-6"
       >
         <Content />
       </div>

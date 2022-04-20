@@ -7,7 +7,9 @@ import { posts } from '../TestData'
 function Content() {
   return (
     <>
-      <div className="text-3xl">OO님의 책장</div>
+      <div className="shadow-inner mt-3 p-2 pl-4 bg-sub rounded-md text-3xl ">
+        OO님의 책장
+      </div>
       <div className="w-full space-y-4">
         {posts?.map(post => (
           <Post post={post} />

@@ -5,7 +5,7 @@ import Card from './Card'
 function Post({ post }) {
   //console.log(post)
   return (
-    <div className="border-y border-sub rounded-lg p-3 my-5">
+    <div className="border-y  rounded-lg p-3 my-5 shadow-md hover:shadow-lg">
       <span className="font-title text-2xl">{post.title}</span>
       <span className="text-base italic">by{post.author}</span>
       <p className="my-1">
@@ -16,7 +16,7 @@ function Post({ post }) {
         ))}
       </p>
       <Card postId={post.postId} cardN={post.cardN} />
-      <div className="border mt-3">
+      <div className="mt-3">
         <p className="text-sub">
           {post.grade
             ? [...Array(5).keys()].map(key => {

@@ -3,9 +3,19 @@ import ReactDOM from 'react-dom'
 import { cards } from '../TestData'
 const getBgImg = id => {
   try {
-    return <img src={require('../../../assets/img/bgImg/' + id + '.png')} />
+    return (
+      <img
+        className="rounded-lg"
+        src={require('../../../assets/img/bgImg/' + id + '.png')}
+      />
+    )
   } catch (e) {
-    return <img src={require('../../../assets/img/bgImg/default.png')} />
+    return (
+      <img
+        className="rounded-lg"
+        src={require('../../../assets/img/bgImg/default.png')}
+      />
+    )
   }
 }
 function Card({ postId, cardN }) {
@@ -28,7 +38,7 @@ function Card({ postId, cardN }) {
 
   return (
     <>
-      <div className="border border-red-300">
+      <div className="">
         <div className="flex justify-between items-center">
           <button
             className={
@@ -42,16 +52,16 @@ function Card({ postId, cardN }) {
           </button>
           <div
             className={
-              'relative flex flex-col justify-between border w-[20em] h-[20em]'
+              'relative flex flex-col justify-between w-[20em] rounded-lg'
             }
           >
             {getBgImg(currentCard?.bgImageId)}
-            <div className="absolute top-0  flex flex-col justify-between w-full h-full">
-              <p className="text-5xl">"</p>
-              <div className="border text-center font-content">
+            <div className="absolute top-0  flex flex-col justify-between w-full h-full p-2">
+              <p className="text-5xl">66</p>
+              <div className="border text-center text-lg font-content">
                 {currentCard?.content}
               </div>
-              <p className="border text-right">{currentCard?.page}p</p>
+              <p className="border text-right text-xl">{currentCard?.page}p</p>
             </div>
           </div>
           <button
