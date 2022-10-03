@@ -1,3 +1,7 @@
-# react 연습용 개인 프로젝트
+# book_together_front
+### 토이 프로젝트 <독후감 공유 웹사이트>의 프론트엔드 코드
 
-도서 감상평을 공유할 수 있는 사이트
+- 기술 스택
+  - React
+  - Redux
+  - TailwindCSS
